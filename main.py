@@ -32,3 +32,34 @@ mon_exp.append(1980)
 mon_exp[3] = mon_exp[3] - 200
 
 print(mon_exp)
+
+
+heros=['spider man','thor','hulk','iron man','captain america']
+
+# 1. Length of the list
+print(len(heros))
+# 2. Add 'black panther' at the end of this list
+heros.append('black panther')
+# 3. You realize that you need to add 'black panther' after 'hulk',
+#    so remove it from the list first and then add it after 'hulk'
+heros.pop()
+heros.insert(heros.index('hulk')+1, 'black panther')
+print(heros)
+# 4. Now you don't like thor and hulk because they get angry easily :)
+#    So you want to remove thor and hulk from list and replace them with doctor strange (because he is cool).
+heros.remove('thor')
+heros.remove('hulk')
+heros.insert(1, 'dr strange')
+#    Do that with one line of code.
+# 5. Sort the heros list in alphabetical order (Hint. Use dir() functions to list down all functions available in list)
+heros.sort()
+print(heros)
+
+# Create a list of all odd numbers between 1 and a max number. Max number is something you need to take from a user using input() function
+
+max = int(input('Limit: '))
+odd_num = []
+for i in range(1, max+1,2):
+  odd_num.append(i)
+
+print(odd_num)
